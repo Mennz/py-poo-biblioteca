@@ -15,3 +15,11 @@ class Biblioteca:
             if livro.isbn == isbn:
                 return livro
         return None
+
+    def emprestar(self, isbn):
+        livro = self.buscar_por_isbn(isbn)
+        if livro is None:
+            print("livro nao encontrado")
+            return False
+        livro.disponivel = False
+        return True
