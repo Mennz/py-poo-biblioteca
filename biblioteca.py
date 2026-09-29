@@ -21,6 +21,9 @@ class Biblioteca:
         if livro is None:
             print("livro nao encontrado")
             return False
+        if not livro.disponivel:
+            print("livro ja esta emprestado")
+            return False
         livro.disponivel = False
         return True
 
