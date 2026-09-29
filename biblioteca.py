@@ -23,3 +23,11 @@ class Biblioteca:
             return False
         livro.disponivel = False
         return True
+
+    def devolver(self, isbn):
+        livro = self.buscar_por_isbn(isbn)
+        if livro is None:
+            print("livro nao encontrado")
+            return False
+        livro.disponivel = True
+        return True
