@@ -31,3 +31,11 @@ class Biblioteca:
             return False
         livro.disponivel = True
         return True
+
+    def listar_disponiveis(self):
+        disponiveis = [livro for livro in self.livros if livro.disponivel]
+        if not disponiveis:
+            print("nenhum livro disponivel no momento")
+            return
+        for livro in disponiveis:
+            print(livro)
